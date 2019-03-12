@@ -15,7 +15,13 @@ class App extends React.Component {
     }
   }
 
-  
+  onChangeType = (e) => {
+    console.log(e.target.value)
+  }
+
+  onFindPetsClick = () => {
+
+  }
 
   render() {
     return (
@@ -26,7 +32,10 @@ class App extends React.Component {
         <div className="ui container">
           <div className="ui grid">
             <div className="four wide column">
-              <Filters />
+              <Filters
+              onChangeType={this.onChangeType}
+              onFindPetsClick={this.onFindPetsClick}
+              />
             </div>
             <div className="twelve wide column">
               <PetBrowser />
