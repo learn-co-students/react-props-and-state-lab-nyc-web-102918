@@ -7,8 +7,8 @@ class Filters extends React.Component {
         <h3>Animal type</h3>
         <div className="field">
           <select
-          onChange={this.props.onChangeType}
-          name="type" 
+          onChange={(event) => this.props.onChangeType(event.target.value)}
+          name="type"
           id="type">
             <option value="all">All</option>
             <option value="cat">Cats</option>
@@ -18,7 +18,7 @@ class Filters extends React.Component {
         </div>
 
         <div className="field">
-          <button className="ui secondary button">Find pets</button>
+          <button onClick={this.props.onFindPetsClick} className="ui secondary button">Find pets</button>
         </div>
       </div>
     )
