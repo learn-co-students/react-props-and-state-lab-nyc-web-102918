@@ -7,7 +7,7 @@ class Pet extends React.Component {
         <div className="content">
           <a className="header">
             {
-              this.props.gender === 'female'?
+              this.props.gender === 'male'?
               '♀'
               :
               '♂'
